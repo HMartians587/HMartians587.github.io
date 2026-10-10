@@ -1,214 +1,213 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Xianrui Hou</title>
-    <meta
-      name="description"
-      content="Personal academic homepage of Xianrui Hou."
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Xianrui Hou · Academic Homepage</title>
+  <meta name="description" content="Xianrui Hou — undergraduate at Dalian University of Technology and research intern at ENCODE Lab, Westlake University. Multimodal reasoning, continual learning, and AI systems.">
+  <meta property="og:title" content="Xianrui Hou · Academic Homepage">
+  <meta property="og:description" content="Multimodal reasoning, continual learning, and AI systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hmartians587.github.io/">
+  <meta property="og:image" content="https://hmartians587.github.io/assets/photo-canal.jpg">
+  <link rel="icon" href="assets/profile.png" type="image/png">
+  <link rel="stylesheet" href="assets/reading-font.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try {
+      const saved = localStorage.getItem('theme');
+      document.documentElement.dataset.theme = saved === 'dark' || (!saved && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    } catch { document.documentElement.dataset.theme = 'light'; }
+  </script>
+  <script defer src="assets/lucide.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="top-nav" aria-label="Primary navigation">
+    <div class="nav-container">
+      <a class="home-link" href="#about">Home</a>
+      <div class="nav-right">
+        <a class="cv-link" href="assets/Xianrui_Hou_CV.pdf" target="_blank" rel="noopener">Curriculum Vitae<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" data-tooltip="Switch to dark theme"><i data-lucide="moon" aria-hidden="true"></i></button>
+        <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav"><i data-lucide="menu" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#about">About</a><a href="#publications">Papers</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#awards">Awards</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <header class="sidebar">
+      <div class="profile-card">
+        <div class="portrait-gallery">
+          <img class="avatar" id="profilePhoto" src="assets/photo-canal.jpg" width="1597" height="1996" alt="Xianrui Hou beside a canal under the trees" fetchpriority="high">
+          <div class="photo-picker" role="group" aria-label="Choose a profile photo">
+            <button type="button" data-photo="assets/photo-canal.jpg" data-alt="Xianrui Hou beside a canal under the trees" aria-label="Photo beside the canal" aria-pressed="true"><img src="assets/photo-canal-thumb.jpg" width="96" height="120" alt=""></button>
+            <button type="button" data-photo="assets/photo-lake.jpg" data-alt="Xianrui Hou beside a turquoise lake" aria-label="Photo beside the lake" aria-pressed="false"><img src="assets/photo-lake-thumb.jpg" width="96" height="120" alt=""></button>
+            <button type="button" data-photo="assets/photo-mountains.jpg" data-alt="Xianrui Hou in front of snow-covered mountains" aria-label="Photo in the mountains" aria-pressed="false"><img src="assets/photo-mountains-thumb.jpg" width="96" height="120" alt=""></button>
+          </div>
+        </div>
+        <div class="identity">
+          <h1 class="site-name">Xianrui Hou</h1>
+          <p class="name-cn" lang="zh-CN">侯宪睿</p>
+          <p class="profile-affiliation">Dalian University of Technology<br>ENCODE Lab, Westlake University</p>
+          <a class="site-email" href="mailto:houxianrui@mail.dlut.edu.cn">houxianrui@mail.dlut.edu.cn</a>
+          <div class="social-icons" aria-label="Academic profiles">
+            <a href="https://scholar.google.com/citations?hl=en&amp;user=akRgQZcAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">Scholar</a>
+            <a href="https://github.com/HMartians587" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            <a href="https://openreview.net/profile?id=%7EXianrui_HOU1" target="_blank" rel="noopener" aria-label="OpenReview">OpenReview</a>
+          </div>
+        </div>
+        <nav class="section-nav" aria-label="Sections">
+          <a href="#about" aria-current="location">About</a>
+          <a href="#publications">Papers</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#awards">Awards</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
-    <main class="page">
-      <section class="intro" id="about">
-        <aside class="profile">
-          <img src="assets/profile.png" alt="Portrait of Xianrui Hou" />
-          <div class="profile-links">
-            <a href="mailto:houxianrui@mail.dlut.edu.cn">Email</a>
-            <a href="https://github.com/HMartians587">GitHub</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=akRgQZcAAAAJ">Scholar</a>
-            <a href="https://openreview.net/profile?id=%7EXianrui_HOU1">OpenReview</a>
-          </div>
-        </aside>
-
-        <article class="bio">
-          <div class="title-block">
-            <h1>Xianrui Hou</h1>
-            <p class="name-cn">&#20399;&#23466;&#30591;</p>
-            <p class="role">
-              Undergrad student, School of Information and Communication Engineering, Dalian
-              University of Technology, 2023-present
-            </p>
-            <p class="affiliation">
-              Intern, ENCODE Lab, School of Engineering, Westlake University
-            </p>
-          </div>
-
-          <h2>About</h2>
-          <p>
-            I am an undergraduate student at Dalian University of Technology and an intern at
-            ENCODE Lab, Westlake University. My research interests include audio-video deepfake
-            detection, efficient AI, and inference engines for hybrid linear-attention
-            architectures.
-          </p>
-          <p>
-            I focus on methods that are technically solid and useful in real systems, especially
-            for long-context inference and multimodal trustworthiness.
-          </p>
-        </article>
+    <main class="content" id="main">
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title">About</h2>
+        <p>I am an undergraduate in Electronic Information Engineering at <a href="https://www.dlut.edu.cn/" target="_blank" rel="noopener">Dalian University of Technology</a> and a research intern at <a href="https://www.westlake.edu.cn/" target="_blank" rel="noopener">Westlake University</a>'s ENCODE Lab, supervised by Huan Wang. Previously, I worked with Shuai Yu in Huchuan Lu's <a href="https://iiaulab.github.io/" target="_blank" rel="noopener">IIAU Lab</a> at Dalian University of Technology.</p>
+        <p>My research focuses on <strong>multimodal learning and reasoning</strong> and <strong>continual learning</strong>. I work on audio-visual consistency, evidence-grounded deepfake detection, and distribution shifts during continual training. I am also interested in software engineering and efficient AI systems.</p>
+        <p class="phd-plan">I plan to pursue a PhD starting in 2027.</p>
       </section>
 
-      <section class="section" id="news">
-        <h2>News</h2>
+      <section class="section news-section" id="news" aria-labelledby="news-title">
+        <h2 class="section-title" id="news-title">News</h2>
         <ul class="news-list">
-          <li>
-            <span class="date">2023.09</span>
-            <span>Joined Dalian University of Technology.</span>
-          </li>
-          <li>
-            <span class="date">2025.05</span>
-            <span>
-              Won Provincial Third Prize in the Lanqiao Cup National Software and Information
-              Technology Professional Talent Competition.
-            </span>
-          </li>
-          <li>
-            <span class="date">2026.06</span>
-            <span>
-              Won Second Prize in the National College Communication System Design Competition.
-            </span>
-          </li>
-          <li>
-            <span class="date">2026.08</span>
-            <span>Joined ENCODE Lab, Westlake University as an intern.</span>
-          </li>
+          <li><time datetime="2026-08">Aug. 2026</time><span>Joined ENCODE Lab at Westlake University to work on continual learning.</span></li>
+          <li><time datetime="2026-05">May 2026</time><span>Received a national second prize in the Undergraduate Communication System Design Competition.</span></li>
+          <li><time datetime="2026-02">Feb. 2026</time><span>Joined <a href="https://iiaulab.github.io/" target="_blank" rel="noopener">IIAU Lab</a> at Dalian University of Technology to work on multimodal learning and reasoning.</span></li>
         </ul>
       </section>
 
-      <section class="section" id="education">
-        <h2>Education</h2>
-        <div class="entry">
-          <div class="entry-time">2023.09-present</div>
-          <div class="entry-body">
-            <h3>Dalian University of Technology</h3>
-            <p>
-              Undergraduate student, School of Information and Communication Engineering.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="experience">
-        <h2>Experience</h2>
-        <div class="entry">
-          <div class="entry-time">2026.08-present</div>
-          <div class="entry-body">
-            <h3>ENCODE Lab, Westlake University</h3>
-            <p>Intern, School of Engineering.</p>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="entry-time">2026.06-2026.07</div>
-          <div class="entry-body">
-            <h3>Panasonic</h3>
-            <p>Smart in-vehicle safe driving and emotional AI companionship system.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="research">
-        <h2>Research Interests</h2>
-        <div class="tags">
-          <span>Audio-Video Deepfake Detection</span>
-          <span>Efficient AI</span>
-          <span>Hybrid Linear-Attention Inference</span>
-          <span>Model Serving</span>
-          <span>Multimodal Systems</span>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <h2>Projects</h2>
-
-        <article class="paper">
-          <img src="assets/mvfake-thumb.png" alt="MVFake project thumbnail" />
-          <div>
-            <h3>MVFake: Multimodal Deepfake Detection for Musical Performance Videos</h3>
-            <p class="authors">Multimodal fake-content detection and evaluation</p>
-            <p class="venue">Research project</p>
-            <p>
-              A multimodal framework for detecting forged musical performance videos, with
-              dataset construction, evaluation tasks, and cross-modality consistency analysis.
-            </p>
-          </div>
-        </article>
-
-        <article class="paper">
-          <img src="assets/hybridserve-thumb.png" alt="HybridServe project thumbnail" />
-          <div>
-            <h3>HybridServe: Compact State Management for Hybrid Linear-Attention Models</h3>
-            <p class="authors">Efficient serving and state management for hybrid linear-attention models</p>
-            <p class="venue">System project</p>
-            <p>
-              A serving-system project focused on compact recurrent state management for hybrid
-              linear-attention architectures and long-context agent inference.
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section class="section" id="awards">
-        <h2>Awards and Honors</h2>
-        <ul class="simple-list">
-          <li>
-            2026 - Second Prize, National College Communication System Design Competition.
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <h2 class="section-title" id="publications-title">Papers &amp; Manuscripts</h2>
+        <ol class="bibliography">
+          <li class="publication">
+            <h3>HIM-CoT: Reasoning over the <span class="unbroken">Human-Instrument-Music</span> Chain for Musical Performance Deepfake Detection</h3>
+            <p class="authors">Shuai Yu<sup>*</sup>, <strong>Xianrui Hou<sup>*</sup></strong>, Yue Zhu, Yuecheng Zhuo, Li Wang, Lijun Wang, Yongqi Shan, Huchuan Lu</p>
+            <p class="publication-meta">Under review at ICLR 2027 <span class="equal-contribution">· <sup>*</sup> Equal contribution</span></p>
+            <p class="publication-summary">A framework for reasoning over audio-visual evidence, evaluated on musical-performance deepfakes. HIM-CoT achieves 89.3% accuracy and 95.0% AP on HIM-DF.</p>
+            <p class="paper-contribution">I co-designed the framework, built the benchmark and supervision datasets, and co-developed the evaluation pipeline.</p>
           </li>
-          <li>
-            2025 - Provincial Third Prize, Lanqiao Cup National Software and Information
-            Technology Professional Talent Competition.
+          <li class="publication">
+            <h3>Learning What to Execute and When: Reasoning Protocols for LLM Inference</h3>
+            <p class="authors">Yu Huo, Kun Zeng, Siyu Zhang, Haoyue Liu, Yuecheng Zhuo, <strong>Xianrui Hou</strong>, YuQuan Lu, Xiaoying Tang</p>
+            <p class="publication-meta">Under review at ICLR 2027</p>
+            <p class="publication-summary">The proposed framework, REPROT, learns which reasoning operations to execute and when to allocate extra computation. Across eight benchmarks, it achieves 84.2% average accuracy at 3.9 calls per question.</p>
+            <p class="paper-contribution">I reproduced baselines, evaluated experimental results, and analyzed accuracy–cost trade-offs.</p>
           </li>
+        </ol>
+      </section>
+
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <h2 class="section-title" id="experience-title">Research &amp; Experience</h2>
+        <div class="experience-list">
+          <article class="experience-entry">
+            <div class="institution-mark"><img src="assets/westlake-mark.png" width="164" height="166" alt="Westlake University emblem" loading="lazy"></div>
+            <div class="entry-body">
+              <div class="entry-heading"><h3>ENCODE Lab, Westlake University</h3><span class="entry-period">Aug. 2026 – Present</span></div>
+              <p class="entry-role">Research Intern · Supervisor: Huan Wang</p>
+              <p>I lead an ongoing project on distribution-change awareness during continual training. I develop the method and online evaluation pipeline under faculty supervision, studying how to detect changes and distinguish new distributions from recurring ones.</p>
+            </div>
+          </article>
+          <article class="experience-entry">
+            <div class="institution-mark"><img src="assets/dut-mark.png" width="144" height="144" alt="Dalian University of Technology emblem" loading="lazy"></div>
+            <div class="entry-body">
+              <div class="entry-heading"><h3><a class="institution-link" href="https://iiaulab.github.io/" target="_blank" rel="noopener">IIAU Lab</a>, Dalian University of Technology</h3><span class="entry-period">Feb. – Sep. 2026</span></div>
+              <p class="entry-role">Undergraduate Researcher · Supervisor: Shuai Yu<br>Group lead: Huchuan Lu</p>
+              <p>Worked on multimodal reasoning, cross-modal consistency, and deepfake detection. Co-designed HIM-CoT with Shuai Yu, built the benchmark and supervision data, and co-developed experiments for reasoning over structured audio-visual evidence.</p>
+            </div>
+          </article>
+          <article class="experience-entry">
+            <div class="institution-mark company-mark"><img src="assets/panasonic-logo.png" width="1072" height="198" alt="Panasonic logo" loading="lazy"></div>
+            <div class="entry-body">
+              <div class="entry-heading"><h3>Panasonic Software Development (Dalian)</h3><span class="entry-period">Jun. – Jul. 2026</span></div>
+              <p class="entry-role">Intern</p>
+              <p>Trained the emotion-recognition model and designed the GUI for a Raspberry Pi driver-monitoring and AI companion prototype, combining camera-based driver-state feedback with voice interaction.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education" aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title">Education</h2>
+        <div class="education-entry">
+          <div class="institution-mark"><img src="assets/dut-mark.png" width="144" height="144" alt="Dalian University of Technology emblem" loading="lazy"></div>
+          <div class="entry-body">
+            <div class="entry-heading"><h3>Dalian University of Technology</h3><span class="entry-period">Sep. 2023 – Jun. 2027</span></div>
+            <p class="education-degree">Electronic Information Engineering (English Intensive)</p>
+            <p class="education-school">School of Information and Communication Engineering · Graduation expected June 2027</p>
+            <details class="coursework">
+              <summary>Selected coursework<i data-lucide="chevron-down" aria-hidden="true"></i></summary>
+              <dl class="course-list">
+                <div><dt>Artificial Intelligence and Information Society</dt><dd>96 / 100</dd></div>
+                <div><dt>Human Intelligence</dt><dd>100 / 100</dd></div>
+                <div><dt>Probability and Statistics A</dt><dd>95 / 100</dd></div>
+                <div><dt>Computer Principles (Bilingual)</dt><dd>95 / 100</dd></div>
+                <div><dt>Discrete Mathematics</dt><dd>92 / 100</dd></div>
+                <div><dt>Signal Processing Laboratory II: System Analysis and Design</dt><dd>99 / 100</dd></div>
+              </dl>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title">Selected Projects</h2>
+        <article class="project">
+          <h3>HybridServe</h3>
+          <p class="project-description">A system project exploring compact recurrent-state management for hybrid linear-attention models and long-context inference.</p>
+        </article>
+        <article class="project">
+          <h3>In-Vehicle Safety &amp; AI Companion</h3>
+          <p class="project-description">A Raspberry Pi prototype combining fatigue detection, driver identification, facial-expression recognition, and AI voice interaction. I worked on emotion-model training and interface design during my Panasonic internship.</p>
+        </article>
+        <article class="project">
+          <h3>Plantar-Pressure-Based Motion Direction Prediction</h3>
+          <p class="project-meta">Undergraduate Innovation Project · Jun. 2025 – Mar. 2026</p>
+          <p class="project-description">Designed the sensor-acquisition circuit, processed multichannel pressure signals, and developed an LSTM with temporal attention to model gait dynamics and predict motion direction.</p>
+        </article>
+      </section>
+
+      <section class="section" id="awards" aria-labelledby="awards-title">
+        <h2 class="section-title" id="awards-title">Selected Awards</h2>
+        <ul class="awards-list">
+          <li><time datetime="2026-05">2026</time><span><strong class="award-title"><i class="award-medal" data-lucide="medal" aria-hidden="true"></i>National Second Prize</strong><br>National Undergraduate Communication System Design Competition</span></li>
         </ul>
       </section>
 
-      <section class="section" id="contact">
-        <h2>Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:houxianrui@mail.dlut.edu.cn">houxianrui@mail.dlut.edu.cn</a>
-        </p>
-        <p>
-          Backup email:
-          <a href="mailto:xianrui.hou22@gmail.com">xianrui.hou22@gmail.com</a>
-        </p>
-        <p>
-          Other email:
-          <a href="mailto:18698059388@163.com">18698059388@163.com</a>
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/HMartians587">github.com/HMartians587</a>
-        </p>
-        <p>
-          Google Scholar:
-          <a href="https://scholar.google.com/citations?hl=en&user=akRgQZcAAAAJ">profile</a>
-        </p>
-        <p>
-          OpenReview:
-          <a href="https://openreview.net/profile?id=%7EXianrui_HOU1">profile</a>
-        </p>
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <details class="skills-details">
+          <summary id="skills-title">Technical skills<i data-lucide="chevron-down" aria-hidden="true"></i></summary>
+          <dl class="skills-list">
+            <div><dt>Programming</dt><dd>Python, C, MATLAB, VHDL</dd></div>
+            <div><dt>Deep learning</dt><dd>PyTorch, custom training loops, multi-GPU training</dd></div>
+            <div><dt>Development</dt><dd>Linux/Bash, Git, remote experiment management</dd></div>
+            <div><dt>Edge &amp; vision</dt><dd>Raspberry Pi, ONNX, MediaPipe, YuNet, SFace</dd></div>
+            <div><dt>Hardware</dt><dd>FPGA, ModelSim SE, Simulink, Multisim, Proteus, JLC EDA</dd></div>
+          </dl>
+        </details>
       </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title">Contact</h2>
+        <p><a class="contact-email" href="mailto:houxianrui@mail.dlut.edu.cn">houxianrui@mail.dlut.edu.cn</a><br><span class="secondary-contact">Alternatively, <a href="mailto:xianrui.hou22@gmail.com">xianrui.hou22@gmail.com</a>.</span></p>
+      </section>
+      <footer class="site-footer">
+        <p>© <span id="year">2026</span> Xianrui Hou · Updated October 2026</p>
+      </footer>
     </main>
-
-    <footer class="footer">
-      <span>Last updated: August 2026</span>
-      <span>&copy; <span id="year"></span> Xianrui Hou</span>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+  </div>
+</body>
 </html>
